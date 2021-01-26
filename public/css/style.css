@@ -6,3 +6,7 @@
 .logo {
     height: 30px
 }
+
+.active {
+    color: red;
+}
