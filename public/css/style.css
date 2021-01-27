@@ -10,3 +10,15 @@
 .active {
     color: red;
 }
+
+.utente {
+    background-color:rgb(209, 179, 179);
+    border-radius: 10px;
+
+}
+
+
+.utente img {
+    height: 100px;
+    width: 100px;
+}

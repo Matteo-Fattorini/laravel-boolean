@@ -19,3 +19,5 @@ Route::get('/corso', "corso@index")->name("corso");
 Route::get('/dopo_il_corso', "dopo_corso@index")->name("dopo_il_corso");
 
 Route::get('/camp_gratuito', "camp@index")->name("camp_gratuito");
+
+Route::get('/user_list', "userController@index")->name("user_list");

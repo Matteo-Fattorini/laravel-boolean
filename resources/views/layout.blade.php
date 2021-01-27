@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="images/png"  href="images/favicon.ico">
     <script defer src="js/app.js"></script>
     <title>Document</title>
 </head>
@@ -26,17 +26,18 @@
         <div class="container">
             <div class="row">
                 <div class="col-8 offset-2 d-flex justify-content-between
-                        align-items-center
-                        ">
+                            align-items-center
+                            ">
 
                     <div class="col-4">
                         <img class="logo" src="https://www.boolean.careers/images/misc/logo.png" alt="">
                     </div>
                     <div class="col-8 d-flex">
                         <ul class="d-flex w-100 justify-content-between
-                            align-items-center mb-0">
+                                align-items-center mb-0">
                             @foreach (config('routes.links') as $link)
-                                <li class={{ Route::currentRouteName() == $link['id'] ? 'active' : '' }}><a href="{{ route($link['id']) }}">{{ $link['name'] }}</a></li>
+                                <li class={{ Route::currentRouteName() == $link['id'] ? 'active' : '' }}><a
+                                        href="{{ route($link['id']) }}">{{ $link['name'] }}</a></li>
 
                             @endforeach
                         </ul>
@@ -48,6 +49,9 @@
                 </div>
 
             </div>
+            @show
+
+            @section("content")
 
             <div class="row">
                 <div class="col-4 offset-4 mt-5">
@@ -59,7 +63,9 @@
                 </div>
             </div>
         </div>
-    @show
+
+            @show
+    
 
 
 </body>
