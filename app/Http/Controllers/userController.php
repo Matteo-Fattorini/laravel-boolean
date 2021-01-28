@@ -13,4 +13,11 @@ class userController extends Controller
         
         return view("users",compact("utenti"));
     }
+
+    public function show($id){
+        $utente = Utente::find($id);
+        return view("user_detail", compact("utente"));
+    }
+
+    
 }
